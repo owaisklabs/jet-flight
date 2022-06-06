@@ -193,7 +193,7 @@ class AuthController extends Controller
             Mail::to($request->email)->send(new otp($details));
             $user->otp = $otp;
             $user->save();
-            return $this->formatResponse('success', 'Reset Password OTP Send on Email');
+            return $this->formatResponse('success', 'Reset Password OTP Send on Email',$otp);
         } else {
             return $this->formatResponse('error', 'Email is not exist');
         }
