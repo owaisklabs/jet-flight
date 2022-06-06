@@ -126,7 +126,7 @@ class AuthController extends Controller
             $user->profile_image = $sliderImg;
         }
         $user->save();
-        return $this->formatResponse('success', 'user sign-up successfully and email send on user account');
+        return $this->formatResponse('success', 'user sign-up successfully and email send on user account',$otp);
     }
     public function verfiyOtp(Request $request)
     {
